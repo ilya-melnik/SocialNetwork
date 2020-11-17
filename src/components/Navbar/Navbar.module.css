@@ -1,0 +1,23 @@
+.nav{
+    grid-area: n;
+    background-color: burlywood;
+    padding: 20px;
+
+    font-family: Lato;
+    font-size: 34px;
+    line-height: 44px;
+    background-color: #13CE66;
+    width: 264px;
+
+}
+
+.item{
+    color: #FFFFFF;
+}
+.item a{
+    text-decoration: none;
+}
+
+.item a.active{
+    color: white;
+}
