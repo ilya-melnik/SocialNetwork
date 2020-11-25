@@ -36,6 +36,8 @@ type RootStateType = {
     dialogsPage: DialogsPageType
     sidebar: SidebarType
 }
+
+
 let state = {
     profilePage: {
         posts: [
