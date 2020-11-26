@@ -2,7 +2,7 @@ import Post from "../components/Profile/MyPosts/Post/Post";
 import React from "react";
 
 export type PostsType = {
-    id: number
+   // id: number
     message: string
     likesCount: number
 }
@@ -41,10 +41,10 @@ export type RootStateType = {
 let state: RootStateType = {
     profilePage: {
         posts: [
-            {id: 1, message: "hi, how are you", likesCount: 1},
-            {id: 2, message: "My name is ilya", likesCount: 23},
-            {id: 3, message: "I have girl",      likesCount: 17},
-            {id: 4, message: "hi-hi",            likesCount: 12}
+            {/*id: 1,*/ message: "hi, how are you", likesCount: 1},
+            {/*id: 2,*/ message: "My name is ilya", likesCount: 23},
+            {/*id: 3, */message: "I have girl",      likesCount: 17},
+            {/*id: 4,*/ message: "hi-hi",            likesCount: 12}
         ]
     },
     dialogsPage: {
