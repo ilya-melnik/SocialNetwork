@@ -11,8 +11,15 @@ import Music from "./components/Music/Music";
 import Setings from "./components/Setings/Setings";
 import state from './redux/state';
 
-
-function App() {
+type postsType = {
+    id: number
+    message: string
+    likesCount: number
+}
+type MyPostPropsType = {
+    posts: Array<postsType>
+}
+function App(props: MyPostPropsType) {
 
     return (
         <BrowserRouter>
@@ -22,7 +29,7 @@ function App() {
 
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs' render={() => <Dialogs/>}/>
-                    <Route path='/profile' render={() => <Profile/>}/>
+                    <Route path='/profile' render={() => <Profile posts={props.posts}/>}/>
                     <Route path='/news'    render={() => <News/>}/>
                     <Route path='/music'   render={() => <Music/>}/>
                     <Route path='/setings' render={() => <Setings/>}/>
