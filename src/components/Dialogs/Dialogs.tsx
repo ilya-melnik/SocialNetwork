@@ -3,10 +3,15 @@ import s from './Dialogs.module.css'
 
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {MyPostPropsType} from "../../App";
+import {DialogsDataType, MessageData} from "../../App";
 
+type DialogsPropsType = {
+    dialogsData: Array<DialogsDataType>
+    messageData: Array<MessageData>
 
-const Dialogs = (props: MyPostPropsType) => {
+}
+
+const Dialogs = (props: DialogsPropsType  ) => {
     let dialogsElement = props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>
         )
 

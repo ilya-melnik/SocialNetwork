@@ -1,37 +1,37 @@
 import Post from "../components/Profile/MyPosts/Post/Post";
 import React from "react";
 
-type PostsType = {
+export type PostsType = {
     id: number
     message: string
     likesCount: number
 }
 
-type DialogsType = {
+export type DialogsType = {
     id: number
     name: string
 
 }
 
-type MessageType = {
+export type MessageType = {
     id: number
     message: string
 }
 
-type SidebarType = {
+export type SidebarType = {
 
 }
 
-type ProfilePageType = {
+export type ProfilePageType = {
     posts: Array<PostsType>
 }
 
-type DialogsPageType = {
+export type DialogsPageType = {
     dialogs: Array<DialogsType>
     message: Array<MessageType>
 }
 
-type RootStateType = {
+export type RootStateType = {
     profilePage: ProfilePageType
     dialogsPage: DialogsPageType
     sidebar: SidebarType

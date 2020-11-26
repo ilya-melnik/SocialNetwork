@@ -11,26 +11,26 @@ import Music from "./components/Music/Music";
 import Setings from "./components/Setings/Setings";
 import state from './redux/state';
 
-export type postsType = {
+export type PostsType = {
     id: number
     message: string
     likesCount: number
 }
-export type dialogsDataType = {
+export type DialogsDataType = {
     id: number
     name: string
 }
-type messageData = {
+export type MessageData = {
     id: number
     message: string
 }
-export type MyPostPropsType = {
-    posts: Array<postsType>
-    dialogsData: Array<dialogsDataType>
-    messageData: Array<messageData>
+export type AppPropsType = {
+    posts: Array<PostsType>
+    dialogsData: Array<DialogsDataType>
+    messageData: Array<MessageData>
 }
 
-function App(props: MyPostPropsType) {
+function App(props: AppPropsType) {
 
     return (
         <BrowserRouter>
