@@ -38,7 +38,7 @@ type RootStateType = {
 }
 
 
-let state = {
+let state: RootStateType = {
     profilePage: {
         posts: [
             {id: 1, message: "hi, how are you", likesCount: 1},
