@@ -13,7 +13,7 @@ import state from './redux/state';
 
 
 function App() {
-    let qqq = state.profilePage.posts[0].id;
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
