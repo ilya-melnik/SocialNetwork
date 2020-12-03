@@ -1,6 +1,8 @@
 import Post from "../components/Profile/MyPosts/Post/Post";
 import React from "react";
+type sidebar = {
 
+}
 export type PostsType = {
    // id: number
     message: string
