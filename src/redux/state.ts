@@ -2,14 +2,14 @@ import Post from "../components/Profile/MyPosts/Post/Post";
 import React from "react";
 
 
-
 export type PostsType = {
-   // id: number
+    // id: number
     message: string
     likesCount: number
 }
 
 export type DialogsType = {
+    avatar: string
     id: number
     name: string
 
@@ -51,18 +51,18 @@ let state: RootStateType = {
         posts: [
             {/*id: 1,*/ message: "hi, how are you", likesCount: 1},
             {/*id: 2,*/ message: "My name is ilya", likesCount: 23},
-            {/*id: 3, */message: "I have girl",      likesCount: 17},
-            {/*id: 4,*/ message: "hi-hi",            likesCount: 12}
+            {/*id: 3, */message: "I have girl", likesCount: 17},
+            {/*id: 4,*/ message: "hi-hi", likesCount: 12}
         ]
     },
     dialogsPage: {
         dialogs: [
-            {id: 1, name: "Nina"},
-            {id: 2, name: "Violeta"},
-            {id: 3, name: "Ruth"},
-            {id: 4, name: "Sasha"},
-            {id: 5, name: "Mikl"},
-            {id: 6, name: "Pavel"}
+            {id: 1, name: "Nina",    avatar: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+            {id: 2, name: "Violeta", avatar: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+            {id: 3, name: "Ruth",    avatar: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+            {id: 4, name: "Sasha",   avatar: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+            {id: 5, name: "Mikl",    avatar: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+            {id: 6, name: "Pavel",   avatar: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'}
         ],
         message: [
             {id: 1, message: "hi"},

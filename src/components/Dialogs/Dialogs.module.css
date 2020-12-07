@@ -6,6 +6,11 @@
 .dialogsItems {
     padding: 10px;
 }
+.dialogsItems img {
+    width: 63px;
+    height: 65px;
+    border-radius: 55px;
+}
 .dialogsItems .active{
     color: gold;
 
