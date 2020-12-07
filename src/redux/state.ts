@@ -58,18 +58,19 @@ let state: RootStateType = {
     dialogsPage: {
         dialogs: [
             {id: 1, name: "Nina"},
-            {id: 1, name: "Violeta"},
-            {id: 1, name: "Ruth"},
-            {id: 1, name: "Sasha"},
-            {id: 1, name: "Mikl"},
-            {id: 1, name: "Pavel"}
+            {id: 2, name: "Violeta"},
+            {id: 3, name: "Ruth"},
+            {id: 4, name: "Sasha"},
+            {id: 5, name: "Mikl"},
+            {id: 6, name: "Pavel"}
         ],
         message: [
             {id: 1, message: "hi"},
             {id: 2, message: "How are you"},
             {id: 3, message: "Yesss"},
             {id: 4, message: "Yesss"},
-            {id: 5, message: "Yesss"}
+            {id: 5, message: "Yesss"},
+            {id: 6, message: "No"}
         ]
     },
 

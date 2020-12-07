@@ -11,7 +11,7 @@ const Dialogs = (props: DialogsPageType  ) => {
         )
 
     let messageElement = props.message
-        .map(message => <Message message={message.message}/>)
+        .map(message => <Message key={message.id} id={message.id} message={message.message} />)
 
     return (
         <div className={s.dialogs}>
