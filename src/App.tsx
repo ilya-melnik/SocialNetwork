@@ -24,7 +24,7 @@ function App(props: AppPropsType) {
 
             <div className='app-wrapper'>
                 <Header/>
-                <Navbar/>
+                <Navbar friend={props.state.sidebar.friend}/>
 
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs} message={props.state.dialogsPage.message}/>}/>
@@ -32,7 +32,7 @@ function App(props: AppPropsType) {
                     <Route path='/news'    render={() => <News/>}/>
                     <Route path='/music'   render={() => <Music/>}/>
                     <Route path='/setings' render={() => <Setings/>}/>
-
+                    <Route path='/friands' render={() => <Friands friend={props.state.sidebar.friend}/>}/>
 
 
 

@@ -21,3 +21,12 @@
 .item a.active{
     color: white;
 }
+
+.friends img{
+    width: 63px;
+    height: 65px;
+    border-radius: 55px;
+}
+.friend_navbar_name{
+    font-size: 20px;
+}

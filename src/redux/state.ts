@@ -1,8 +1,8 @@
 import Post from "../components/Profile/MyPosts/Post/Post";
 import React from "react";
-type sidebar = {
 
-}
+
+
 export type PostsType = {
    // id: number
     message: string
@@ -19,10 +19,12 @@ export type MessageType = {
     id: number
     message: string
 }
-
-export type SidebarType = {
-
+export type FriendType = {
+    id: number
+    name: string
+    img: string
 }
+
 
 export type ProfilePageType = {
     posts: Array<PostsType>
@@ -33,10 +35,14 @@ export type DialogsPageType = {
     message: Array<MessageType>
 }
 
+export type SidebarPageType = {
+    friend: Array<FriendType>
+}
+
 export type RootStateType = {
     profilePage: ProfilePageType
     dialogsPage: DialogsPageType
-    sidebar: SidebarType
+    sidebar: SidebarPageType
 }
 
 
@@ -66,6 +72,14 @@ let state: RootStateType = {
             {id: 5, message: "Yesss"}
         ]
     },
-    sidebar: {}
+
+    sidebar: {
+        friend: [
+            {id: 1, name: 'Nik', img: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+            {id: 2, name: 'Ilya', img: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+            {id: 3, name: 'Alex', img: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
+        ]
+    },
+
 }
 export default state;
