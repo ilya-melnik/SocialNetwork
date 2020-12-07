@@ -26,14 +26,10 @@ const Navbar = (props: SidebarPageType) => {
 
             <div className={s.item}>
                 <NavLink to='setings' activeClassName={s.active}>Friends </NavLink>
-
             </div>
+
             <div className={s.friends}>
-
-
-
-                <Friands friend={props.friend}/>
-
+                <Friands friends={props.friends}/>
             </div>
 
         </nav>

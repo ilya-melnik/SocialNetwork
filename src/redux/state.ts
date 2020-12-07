@@ -36,7 +36,7 @@ export type DialogsPageType = {
 }
 
 export type SidebarPageType = {
-    friend: Array<FriendType>
+    friends: Array<FriendType>
 }
 
 export type RootStateType = {
@@ -74,7 +74,7 @@ let state: RootStateType = {
     },
 
     sidebar: {
-        friend: [
+        friends: [
             {id: 1, name: 'Nik', img: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
             {id: 2, name: 'Ilya', img: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
             {id: 3, name: 'Alex', img: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'},
