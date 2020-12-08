@@ -18,6 +18,7 @@ export type DialogsType = {
 export type MessageType = {
     id: number
     message: string
+    isMine: boolean
 }
 export type FriendType = {
     id: number
@@ -65,12 +66,12 @@ let state: RootStateType = {
             {id: 6, name: "Pavel",   avatar: 'https://hair-man.ru/wp-content/uploads/2017/08/131.jpg'}
         ],
         message: [
-            {id: 1, message: "hi"},
-            {id: 2, message: "How are you"},
-            {id: 3, message: "Yesss"},
-            {id: 4, message: "Yesss"},
-            {id: 5, message: "Yesss"},
-            {id: 6, message: "No"}
+            {id: 1, message: "hi", isMine: true},
+            {id: 2, message: "How are you", isMine: false},
+            {id: 3, message: "Yesss", isMine: true},
+            {id: 4, message: "Yesss", isMine: false},
+            {id: 5, message: "Yesss", isMine: true},
+            {id: 6, message: "No", isMine: false}
         ]
     },
 

@@ -11,14 +11,14 @@ const Dialogs = (props: DialogsPageType  ) => {
         )
 
     let messageElement = props.message
-        .map(message => <Message key={message.id} id={message.id} message={message.message} />)
+        .map(message => <Message key={message.id} id={message.id} message={message.message} isMine={message.isMine}/>)
 
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
                 {dialogsElement}
             </div>
-            <div className={s.messages}>
+            <div className={s.messages} style={{border: '1px solid black'}}>
                 {messageElement}
             </div>
         </div>
