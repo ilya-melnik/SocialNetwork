@@ -26,6 +26,7 @@ const MyPosts = (props: PropsType) => {
             <h3>My posts</h3>
             <div>
                 <div>
+
                     <textarea ref={ newPostElements }></textarea>
                 </div>
                 <div>
