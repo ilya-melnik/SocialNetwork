@@ -9,12 +9,13 @@ import {BrowserRouter, Route} from "react-router-dom"
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Setings from "./components/Setings/Setings";
-import state, {RootStateType} from './redux/state';
+import state, {addPost, RootStateType} from './redux/state';
 import Friands from "./components/Friands/Friends";
 
 
 type AppPropsType = {
     state: RootStateType
+    addPost: (newMessage: string) => void
 }
 
 
@@ -27,8 +28,11 @@ function App(props: AppPropsType) {
                 <Navbar friends={props.state.sidebar.friends}/>
 
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs} message={props.state.dialogsPage.message}/>}/>
-                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs}
+                                                                  message={props.state.dialogsPage.message}
+                                                                 />}/>
+                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts}
+                                                                  addPost={addPost}/>} />
                     <Route path='/news'    render={() => <News/>}/>
                     <Route path='/music'   render={() => <Music/>}/>
                     <Route path='/setings' render={() => <Setings/>}/>
