@@ -10,16 +10,21 @@ type PropsType = {
 
 const MyPosts = (props: PropsType) => {
 
+    let newPostElements = React.createRef<HTMLTextAreaElement>();
+
     let postsElemens =
         props.posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>)
 
-    let newPostElements = React.createRef<HTMLTextAreaElement>();
     let addPost = () => {
 
         let text = newPostElements.current?.value
         if(text) {
             props.addPost(text)
+            if(newPostElements.current !== null){
+            newPostElements.current.value = ''
+            }
         }
+
     }
     return (
         <div className={s.postsBlock}>
@@ -27,7 +32,7 @@ const MyPosts = (props: PropsType) => {
             <div>
                 <div>
 
-                    <textarea ref={ newPostElements }></textarea>
+                    <textarea ref={newPostElements}></textarea>
                 </div>
                 <div>
                     <button onClick={ addPost }>Add post</button>

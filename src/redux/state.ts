@@ -1,5 +1,6 @@
 import Post from "../components/Profile/MyPosts/Post/Post";
 import React from "react";
+import {renderEntireTree} from "../render";
 
 
 export type PostsType = {
@@ -93,5 +94,6 @@ export let addPost = (newMessage: string) => {
         id: 5, message: newMessage, likesCount: 0
     }
     state.profilePage.posts.push(newPost)
+    renderEntireTree(state)
 }
 export default state;
