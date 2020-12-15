@@ -3,7 +3,7 @@ import {SidebarPageType} from "../../redux/state";
 import s from "./Friends.module.css"
 
 
-const Friands = (props: SidebarPageType) => {
+const Friends = (props: SidebarPageType) => {
     let FriendElement = props.friends.map(({id, img,name}) => {
        return (<div className={s.friend} key={id}>
            <img className={s.ava} src={img}/>
@@ -15,4 +15,4 @@ const Friands = (props: SidebarPageType) => {
         </div>)
 }
 
-export default Friands;
+export default Friends;

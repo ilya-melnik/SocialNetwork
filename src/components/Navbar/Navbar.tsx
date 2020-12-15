@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import {SidebarPageType} from "../../redux/state";
-import Friands from "../Friands/Friends";
+import Friends from "../Friands/Friends";
 
 
 const Navbar = (props: SidebarPageType) => {
@@ -29,7 +29,7 @@ const Navbar = (props: SidebarPageType) => {
             </div>
 
             <div className={s.friends}>
-                <Friands friends={props.friends}/>
+                <Friends friends={props.friends}/>
             </div>
 
         </nav>

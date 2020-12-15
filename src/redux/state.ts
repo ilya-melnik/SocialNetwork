@@ -1,12 +1,14 @@
 import Post from "../components/Profile/MyPosts/Post/Post";
 import React from "react";
 import {renderEntireTree} from "../render";
+import {deepEqual} from "assert";
 
 
 export type PostsType = {
     id: number
     message: string
     likesCount: number
+    // updateNewPostText: (newText: string) => any
 
 }
 
@@ -31,6 +33,8 @@ export type FriendType = {
 
 export type ProfilePageType = {
     posts: Array<PostsType>
+    newPostText: string
+    // updateNewPostText: (newText: string) => any
 
 
 }
@@ -38,6 +42,8 @@ export type ProfilePageType = {
 export type DialogsPageType = {
     dialogs: Array<DialogsType>
     message: Array<MessageType>
+    newMessText: string
+
 }
 
 export type SidebarPageType = {
@@ -59,7 +65,8 @@ let state: RootStateType = {
             {id: 2, message: "My name is ilya", likesCount: 23},
             {id: 3, message: "I have girl", likesCount: 17},
             {id: 4, message: "hi-hi", likesCount: 12}
-        ]
+        ],
+        newPostText: 'it incubator'
     },
     dialogsPage: {
         dialogs: [
@@ -77,7 +84,8 @@ let state: RootStateType = {
             {id: 4, message: "Yesss", isMine: false},
             {id: 5, message: "Yesss", isMine: true},
             {id: 6, message: "No", isMine: false}
-        ]
+        ],
+        newMessText: "q"
     },
     sidebar: {
         friends: [
@@ -88,12 +96,33 @@ let state: RootStateType = {
     },
 }
 
-export let addPost = (newMessage: string) => {
+export let addPost = () => {
 
     const newPost: PostsType = {
-        id: 5, message: newMessage, likesCount: 0
+        id: 5, message: state.profilePage.newPostText, likesCount: 0
     }
     state.profilePage.posts.push(newPost)
+    state.profilePage.newPostText = ""
     renderEntireTree(state)
 }
+
+export const updateNewPostText = (newText: string) => {
+    state.profilePage.newPostText = newText
+    renderEntireTree(state)
+}
+
+
+// Add to <Dialods /> chat
+
+export const addPostMess = () => {
+    const newMessPost: MessageType = {id: 7, message: state.dialogsPage.newMessText, isMine: true}
+    state.dialogsPage.message.push(newMessPost)
+    renderEntireTree(state)
+}
+
+export const updateNewMessPostText = (newMessText: string) => {
+    state.dialogsPage.newMessText = newMessText
+    renderEntireTree(state)
+}
+
 export default state;

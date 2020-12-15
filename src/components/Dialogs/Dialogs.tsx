@@ -3,15 +3,17 @@ import s from './Dialogs.module.css'
 
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {DialogsPageType, DialogsType, MessageType} from "../../redux/state";
+import { DialogsType, MessageType} from "../../redux/state";
 
 
 type PropsType = {
     dialogs: Array<DialogsType>
     message: Array<MessageType>
+    addPostMess: () => void
+    updateNewMessPostText: (newMessText: string) => void
 }
 
-const Dialogs = (props: DialogsPageType) => {
+const Dialogs = (props: PropsType) => {
     let dialogsElement = props.dialogs.map(dialog => <DialogItem avatar={dialog.avatar} name={dialog.name}
                                                                  id={dialog.id}/>
     )
@@ -21,16 +23,15 @@ const Dialogs = (props: DialogsPageType) => {
 
 
     let newPostElements = React.createRef<HTMLTextAreaElement>();
-    let addPost = () => {
-        let text = newPostElements.current?.value
-        if (text) {
-
-
-        }
+    let addPostMess = () => {
+      props.addPostMess()
     }
 
-
-
+const updateNewMessPostTextj  = () => {
+    let text = newPostElements.current?.value
+    if(text) {
+        props.updateNewMessPostText(text)
+    }}
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
@@ -39,8 +40,8 @@ const Dialogs = (props: DialogsPageType) => {
             <div className={s.messages} style={{border: '1px solid black'}}>
                 {messageElement}
                 <div className={s.textereaAdd}>
-                    <textarea ref={newPostElements}></textarea>
-                    <button onClick={addPost}>Add</button>
+                    <textarea onChange={updateNewMessPostTextj} ref={newPostElements}></textarea>
+                    <button onClick={addPostMess}>Add</button>
                 </div>
 
             </div>
